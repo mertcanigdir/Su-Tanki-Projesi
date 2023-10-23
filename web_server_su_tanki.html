@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>tank ornek</title>
+    <style>
+        .tank {
+            /* size */
+            width: 150px;
+            height: 300px;
+
+            /* colors */
+            border: 2px solid black;
+            background: white;
+
+            position: relative;
+            /* to allow positioning the water at bottom */
+
+            display: inline-block;
+            /* so the div doesn't wrap */
+            margin: 10px;
+            /* space between divs */
+        }
+
+        .tank .water {
+            position: absolute;
+
+            /* color of water */
+            background: blue;
+
+            /* water position */
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        // depo1
+        function Kontrol(deger) {
+        if (deger <= 5) {
+            var divElementi = document.getElementById("ss");
+            divElementi.style.height = "0%"; // Yeni height değerini burada belirleyebilirsiniz
+        }else if (deger <= 10){
+            var divElementi = document.getElementById("ss");
+            divElementi.style.height = "10%";
+        }else if (deger <= 20){
+            var divElementi = document.getElementById("ss");
+            divElementi.style.height = "20%";
+        }else if (deger <= 30){
+            var divElementi = document.getElementById("ss");
+            divElementi.style.height = "30%";
+        }else if (deger <= 40){
+            var divElementi = document.getElementById("ss");
+            divElementi.style.height = "40%";
+        }else if (deger <= 50){
+            var divElementi = document.getElementById("ss");
+            divElementi.style.height = "50%";
+        }else if (deger <= 60){
+            var divElementi = document.getElementById("ss");
+            divElementi.style.height = "60%";
+        }else if (deger <= 70){
+            var divElementi = document.getElementById("ss");
+            divElementi.style.height = "70%";
+        }else if (deger <= 80){
+            var divElementi = document.getElementById("ss");
+            divElementi.style.height = "80%";
+        }else if (deger <= 90){
+            var divElementi = document.getElementById("ss");
+            divElementi.style.height = "90%";
+        }else{
+            var divElementi = document.getElementById("ss");
+            divElementi.style.height = "100%";
+        }
+        }
+        setInterval(() => {
+            var a = document.getElementById("abc").innerHTML;;
+            Kontrol(a);
+        }, 200)
+    </script>
+</head>
+
+<body>
+    <div class="tank">
+        <div id="ss" class="water" style="height: 50%;"></div>
+    </div>
+    <div>
+        <p id="abc">:="DB".deger:</p>
+    </div>
+</body>
+
+</html>
